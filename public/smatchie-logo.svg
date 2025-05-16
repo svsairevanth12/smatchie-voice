@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2C3E50" />
+      <stop offset="100%" stop-color="#4A90E2" />
+    </linearGradient>
+  </defs>
+  <path d="M20,10 C30,5 40,5 50,10 C60,15 70,15 80,10 L80,40 C70,45 60,45 50,40 C40,35 30,35 20,40 Z" fill="url(#logoGradient)" />
+  <text x="90" y="32" font-family="Arial, sans-serif" font-weight="bold" font-size="24" fill="#2C3E50">Smatchie</text>
+</svg>
