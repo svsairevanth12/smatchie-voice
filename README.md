@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# Pollinations TTS - Text-to-Speech Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based text-to-speech application that uses the free Pollinations.AI API to convert text to speech without requiring any API keys.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Convert text to speech using Pollinations.AI's TTS service
+- Automatically adds "say this:" before the user's text
+- Choose from multiple voice options
+- Download generated audio files
+- No API key required
+- Simple, clean user interface
 
-### `npm start`
+## How It Works
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This application leverages the Pollinations.AI API, which provides free text-to-speech capabilities without requiring authentication or API keys. The application:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Takes user input text
+2. Automatically adds "say this:" before the user's text
+3. Allows selection of different voice options
+4. Sends a request to the Pollinations API
+5. Plays the generated audio
+6. Provides an option to download the audio file
 
-### `npm test`
+## Available Voices
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The application supports the following voices:
 
-### `npm run build`
+- Alloy
+- Echo
+- Fable
+- Nova
+- Onyx
+- Shimmer
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+These voices are provided by the OpenAI TTS model through Pollinations.AI.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## API Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The application uses the following API endpoint:
 
-### `npm run eject`
+```
+https://text.pollinations.ai/[text]?model=openai-audio&voice=[voice]
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Where:
+- `[text]` is the URL-encoded text to convert to speech
+- `[voice]` is the selected voice option
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Prerequisites
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Node.js (v14 or higher)
+- npm or yarn
 
-## Learn More
+### Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Clone the repository:
+```
+git clone https://github.com/yourusername/pollinations-tts.git
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Navigate to the project directory:
+```
+cd pollinations-tts
+```
 
-### Code Splitting
+3. Install dependencies:
+```
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Start the development server:
+```
+npm start
+```
 
-### Analyzing the Bundle Size
+5. Open your browser and navigate to `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Building for Production
 
-### Making a Progressive Web App
+To create a production build:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+npm run build
+```
 
-### Advanced Configuration
+This will create an optimized build in the `build` folder that can be deployed to any static hosting service.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Technologies Used
 
-### Deployment
+- React
+- JavaScript
+- HTML/CSS
+- Pollinations.AI API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## About Pollinations.AI
 
-### `npm run build` fails to minify
+[Pollinations.AI](https://pollinations.ai) is an open-source gen AI startup providing free text and image generation APIs without requiring signups or API keys. They prioritize privacy with zero data storage and completely anonymous usage.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- [Pollinations.AI](https://pollinations.ai) for providing the free TTS API
+- [Create React App](https://create-react-app.dev/) for the React application boilerplate
